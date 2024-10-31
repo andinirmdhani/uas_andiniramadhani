@@ -137,79 +137,9 @@ Author URL: http://w3layouts.com
                     <div class="pos-sticky">
                         <h3 class="section-title-left">Trending </h3>
 
-                        <div class="grids5-info">
-                            <h4>01.</h4>
-                            <div class="blog-info">
-                                <a href="#blog-single" class="blog-desc1"> 10 Fresh Ways to Get Better Results From Your
-                                    Blog Posts
-                                </a>
-                                <div class="author align-items-center mt-2 mb-1">
-                                    <a href="#author">Johnson smith</a> in <a href="#url">Design</a>
-                                </div>
-                                <ul class="blog-meta">
-                                    <li class="meta-item blog-lesson">
-                                        <span class="meta-value"> April 13, 2020 </span>
-                                    </li>
-                                    <li class="meta-item blog-students">
-                                        <span class="meta-value"> 6 read</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="grids5-info">
-                            <h4>02.</h4>
-                            <div class="blog-info">
-                                <a href="#blog-single" class="blog-desc1"> How to Optimize for on-page SEO.
-                                </a>
-                                <div class="author align-items-center mt-2 mb-1">
-                                    <a href="#author">Johnson smith</a> in <a href="#url">Design</a>
-                                </div>
-                                <ul class="blog-meta">
-                                    <li class="meta-item blog-lesson">
-                                        <span class="meta-value"> April 13, 2020 </span>
-                                    </li>
-                                    <li class="meta-item blog-students">
-                                        <span class="meta-value"> 6 read</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="grids5-info">
-                            <h4>03.</h4>
-                            <div class="blog-info">
-                                <a href="#blog-single" class="blog-desc1"> What to Post on the Instagram
-                                </a>
-                                <div class="author align-items-center mt-2 mb-1">
-                                    <a href="#author">Johnson smith</a> in <a href="#url">Design</a>
-                                </div>
-                                <ul class="blog-meta">
-                                    <li class="meta-item blog-lesson">
-                                        <span class="meta-value"> April 13, 2020 </span>
-                                    </li>
-                                    <li class="meta-item blog-students">
-                                        <span class="meta-value"> 6 read</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="grids5-info">
-                            <h4>04.</h4>
-                            <div class="blog-info">
-                                <a href="#blog-single" class="blog-desc1"> 18 Photo & Video Ideas to Spark Inspiration
-                                </a>
-                                <div class="author align-items-center mt-3 mb-1">
-                                    <a href="#author">Johnson smith</a> in <a href="#url">Design</a>
-                                </div>
-                                <ul class="blog-meta">
-                                    <li class="meta-item blog-lesson">
-                                        <span class="meta-value"> April 13, 2020 </span>
-                                    </li>
-                                    <li class="meta-item blog-students">
-                                        <span class="meta-value"> 6 read</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                    <?php include 'route/trending.php';?>    
+                        
+                        
                     </div>
                 </div>
             </div>

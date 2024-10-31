@@ -135,79 +135,8 @@ Author URL: http://w3layouts.com
                 <div class="pos-sticky">
                     <h3 class="section-title-left">Trending </h3>
 
-                    <div class="grids5-info">
-                        <h4>01.</h4>
-                        <div class="blog-info">
-                            <a href="#blog-single" class="blog-desc1"> You can always change your domain name in the future if you like.
-                            </a>
-                            <div class="author align-items-center mt-2 mb-1">
-                                <a href="#author">Johnson smith</a> in <a href="#url">Design</a>
-                            </div>
-                            <ul class="blog-meta">
-                                <li class="meta-item blog-lesson">
-                                    <span class="meta-value"> April 13, 2020 </span>
-                                </li>
-                                <li class="meta-item blog-students">
-                                    <span class="meta-value"> 6min read</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="grids5-info">
-                        <h4>02.</h4>
-                        <div class="blog-info">
-                            <a href="#blog-single" class="blog-desc1"> Pick a domain name & hosting for your blog
-                            </a>
-                            <div class="author align-items-center mt-2 mb-1">
-                                <a href="#author">Johnson smith</a> in <a href="#url">Design</a>
-                            </div>
-                            <ul class="blog-meta">
-                                <li class="meta-item blog-lesson">
-                                    <span class="meta-value"> April 13, 2020 </span>
-                                </li>
-                                <li class="meta-item blog-students">
-                                    <span class="meta-value"> 6min read</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="grids5-info">
-                        <h4>03.</h4>
-                        <div class="blog-info">
-                            <a href="#blog-single" class="blog-desc1"> How To Start A Blog From Scratch and with No Experience
-
-                            </a>
-                            <div class="author align-items-center mt-2 mb-1">
-                                <a href="#author">Johnson smith</a> in <a href="#url">Design</a>
-                            </div>
-                            <ul class="blog-meta">
-                                <li class="meta-item blog-lesson">
-                                    <span class="meta-value"> April 13, 2020 </span>
-                                </li>
-                                <li class="meta-item blog-students">
-                                    <span class="meta-value"> 6min read</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="grids5-info">
-                        <h4>04.</h4>
-                        <div class="blog-info">
-                            <a href="#blog-single" class="blog-desc1"> Within few minutes, you will have your blog up and running.
-                           </a>
-                            <div class="author align-items-center mt-3 mb-1">
-                                <a href="#author">Johnson smith</a> in <a href="#url">Design</a>
-                            </div>
-                            <ul class="blog-meta">
-                                <li class="meta-item blog-lesson">
-                                    <span class="meta-value"> April 13, 2020 </span>
-                                </li>
-                                <li class="meta-item blog-students">
-                                    <span class="meta-value"> 6min read</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                    <?php include 'route/trending_technology.php';?>    
+                
                 </div>
             </div>
         </div>

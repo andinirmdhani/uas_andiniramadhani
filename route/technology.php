@@ -61,7 +61,7 @@ $result = $stmt->get_result();
                         </a>
                     </div>
                     <div class="card-body p-0 blog-details">
-                        <a href="#blog-single" class="blog-desc"><?php echo htmlspecialchars($row['judul']); ?></a>
+                    <a href="detail.php?id=<?php echo $row['id']; ?>" class="blog-desc mt-0"><?php echo htmlspecialchars($row['judul']); ?></a>
                         <p><?php echo htmlspecialchars($row['isi']); ?></p>
                         <div class="author align-items-center mt-3 mb-1">
                             <a href="#author"><?php echo htmlspecialchars($row['author']); ?></a> in <a href="#url"><?php echo htmlspecialchars($row['kategori']); ?></a>

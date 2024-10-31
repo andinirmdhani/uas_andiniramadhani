@@ -39,7 +39,8 @@ if ($result->num_rows > 0) {
         <div class="grids5-info img-block-mobile mt-5">
             <div class="blog-info align-self">
                 <span class="category"><?php echo htmlspecialchars($row['kategori']); ?></span>
-                <a href="#blog-single" class="blog-desc mt-0"><?php echo htmlspecialchars($row['judul']); ?></a>
+                <!-- Ubah link judul agar mengarah ke detail.php dengan ID artikel -->
+                <a href="detail.php?id=<?php echo $row['id']; ?>" class="blog-desc mt-0"><?php echo htmlspecialchars($row['judul']); ?></a>
                 <p><?php echo htmlspecialchars($row['isi']); ?></p>
                 <div class="author align-items-center mt-3 mb-1">
                     <a href="#author"><?php echo htmlspecialchars($row['author']); ?></a> in 

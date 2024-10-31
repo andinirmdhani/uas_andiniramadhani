@@ -132,79 +132,8 @@ Author URL: http://w3layouts.com
             <div class="col-lg-4 trending mt-lg-0 mt-5 mb-lg-5">
                 <div class="pos-sticky">
                     <h3 class="section-title-left">Trending </h3>
+                    <?php include 'route/trending_lifestyle.php';?>    
 
-                    <div class="grids5-info">
-                        <h4>01.</h4>
-                        <div class="blog-info">
-                            <a href="#blog-single" class="blog-desc1"> Few Ways to Readership and improving your blog
-                            </a>
-                            <div class="author align-items-center mt-2 mb-1">
-                                <a href="#author">Johnson smith</a> in <a href="#url">Design</a>
-                            </div>
-                            <ul class="blog-meta">
-                                <li class="meta-item blog-lesson">
-                                    <span class="meta-value"> April 13, 2020 </span>
-                                </li>
-                                <li class="meta-item blog-students">
-                                    <span class="meta-value"> 6min read</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="grids5-info">
-                        <h4>02.</h4>
-                        <div class="blog-info">
-                            <a href="#blog-single" class="blog-desc1"> One major difference between a normal blog and a good blog is the detailing.
-                            </a>
-                            <div class="author align-items-center mt-2 mb-1">
-                                <a href="#author">Johnson smith</a> in <a href="#url">Design</a>
-                            </div>
-                            <ul class="blog-meta">
-                                <li class="meta-item blog-lesson">
-                                    <span class="meta-value"> April 13, 2020 </span>
-                                </li>
-                                <li class="meta-item blog-students">
-                                    <span class="meta-value"> 6min read</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="grids5-info">
-                        <h4>03.</h4>
-                        <div class="blog-info">
-                            <a href="#blog-single" class="blog-desc1"> When should you start putting ads on your blog?
-                            </a>
-                            <div class="author align-items-center mt-2 mb-1">
-                                <a href="#author">Johnson smith</a> in <a href="#url">Design</a>
-                            </div>
-                            <ul class="blog-meta">
-                                <li class="meta-item blog-lesson">
-                                    <span class="meta-value"> April 13, 2020 </span>
-                                </li>
-                                <li class="meta-item blog-students">
-                                    <span class="meta-value"> 6min read</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="grids5-info">
-                        <h4>04.</h4>
-                        <div class="blog-info">
-                            <a href="#blog-single" class="blog-desc1"> What should be the name of your blog domain?
-                            </a>
-                            <div class="author align-items-center mt-3 mb-1">
-                                <a href="#author">Johnson smith</a> in <a href="#url">Design</a>
-                            </div>
-                            <ul class="blog-meta">
-                                <li class="meta-item blog-lesson">
-                                    <span class="meta-value"> April 13, 2020 </span>
-                                </li>
-                                <li class="meta-item blog-students">
-                                    <span class="meta-value"> 6min read</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
