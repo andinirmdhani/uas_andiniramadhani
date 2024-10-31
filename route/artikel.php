@@ -64,7 +64,6 @@ if ($result->num_rows > 0) {
     echo "Tidak ada data yang ditemukan.";
 }
 
-// Pagination control
 ?>
 <div class="pagination-wrapper mt-5">
     <ul class="page-pagination">
