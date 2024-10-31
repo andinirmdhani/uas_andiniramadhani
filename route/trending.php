@@ -13,10 +13,8 @@ if ($conn->connect_error) {
     die("Koneksi gagal: " . $conn->connect_error);
 }
 
-// Tentukan batas artikel yang akan ditampilkan
 $limit = 4;
 
-// Query untuk mengambil artikel berdasarkan jumlah views tertinggi untuk semua kategori
 $sql = "SELECT id, judul, kategori, author, tanggal_publikasi, views 
         FROM artikel 
         ORDER BY views DESC 
