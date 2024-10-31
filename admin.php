@@ -17,16 +17,34 @@ $action = $_GET['action'] ?? 'view'; // default to 'view' action
 $id = $_GET['id'] ?? null;
 
 if ($action === 'add' && $_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Handle adding new article
+    // Ambil data dari form
     $judul = $_POST['judul'];
     $isi = $_POST['isi'];
     $kategori = $_POST['kategori'];
     $author = $_POST['author'];
     $tanggal_publikasi = $_POST['tanggal_publikasi'];
-    $images = $_POST['images'];
+    
+    // Proses upload file gambar
+    $image_name = '';
+    if ($_FILES['images']['error'] == 0) {
+        $image_name = uniqid() . '-' . basename($_FILES['images']['name']);
+        $target_path = 'upload/' . $image_name;
 
+        // Pastikan direktori upload ada
+        if (!is_dir('upload')) {
+            mkdir('upload', 0755, true);
+        }
+
+        if (move_uploaded_file($_FILES['images']['tmp_name'], $target_path)) {
+            // Gambar berhasil di-upload
+        } else {
+            echo "Gambar gagal di-upload.";
+        }
+    }
+
+    // Simpan ke database
     $stmt = $pdo->prepare("INSERT INTO artikel (judul, isi, kategori, author, tanggal_publikasi, images, views) VALUES (?, ?, ?, ?, ?, ?, 0)");
-    $stmt->execute([$judul, $isi, $kategori, $author, $tanggal_publikasi, $images]);
+    $stmt->execute([$judul, $isi, $kategori, $author, $tanggal_publikasi, $image_name]);
     header("Location: ?action=view");
 }
 
@@ -37,10 +55,22 @@ if ($action === 'edit' && $_SERVER['REQUEST_METHOD'] === 'POST') {
     $kategori = $_POST['kategori'];
     $author = $_POST['author'];
     $tanggal_publikasi = $_POST['tanggal_publikasi'];
-    $images = $_POST['images'];
+    $image_name = $_POST['existing_image']; // Simpan nama gambar yang sudah ada
+
+    // Proses upload file gambar baru jika ada
+    if ($_FILES['images']['error'] == 0) {
+        $image_name = uniqid() . '-' . basename($_FILES['images']['name']);
+        $target_path = 'upload/' . $image_name;
+        
+        if (move_uploaded_file($_FILES['images']['tmp_name'], $target_path)) {
+            // Gambar berhasil di-upload
+        } else {
+            echo "Gambar gagal di-upload.";
+        }
+    }
 
     $stmt = $pdo->prepare("UPDATE artikel SET judul = ?, isi = ?, kategori = ?, author = ?, tanggal_publikasi = ?, images = ? WHERE id = ?");
-    $stmt->execute([$judul, $isi, $kategori, $author, $tanggal_publikasi, $images, $id]);
+    $stmt->execute([$judul, $isi, $kategori, $author, $tanggal_publikasi, $image_name, $id]);
     header("Location: ?action=view");
 }
 
@@ -87,12 +117,18 @@ if ($action === 'delete' && $id) {
                 ?>
                     <tr>
                         <td><?= $row['id'] ?></td>
-                        <td><?= $row['judul'] ?></td>
-                        <td><?= $row['kategori'] ?></td>
-                        <td><?= $row['author'] ?></td>
-                        <td><?= $row['tanggal_publikasi'] ?></td>
+                        <td><?= htmlspecialchars($row['judul']) ?></td>
+                        <td><?= htmlspecialchars($row['kategori']) ?></td>
+                        <td><?= htmlspecialchars($row['author']) ?></td>
+                        <td><?= htmlspecialchars($row['tanggal_publikasi']) ?></td>
                         <td><?= $row['views'] ?></td>
-                        <td><img src="<?= $row['images'] ?>" alt="Image" width="50"></td>
+                        <td>
+                            <?php if (!empty($row['images'])): ?>
+                                <img src="upload/<?= htmlspecialchars($row['images']) ?>" alt="Image" width="100" height="100">
+                            <?php else: ?>
+                                <p>Tidak ada gambar</p>
+                            <?php endif; ?>
+                        </td>
                         <td>
                             <a href="?action=edit&id=<?= $row['id'] ?>" class="btn btn-sm btn-warning">Edit</a>
                             <a href="?action=delete&id=<?= $row['id'] ?>" class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus artikel ini?');">Hapus</a>
@@ -114,17 +150,18 @@ if ($action === 'delete' && $id) {
         ?>
 
         <!-- Add/Edit Article Form -->
-        <form method="post" class="container mt-5">
+        <form method="post" enctype="multipart/form-data" class="container mt-5">
             <h2><?= $action === 'add' ? 'Tambah' : 'Edit' ?> Artikel</h2>
-            <input type="text" name="judul" value="<?= $article['judul'] ?>" placeholder="Judul" class="form-control mb-2" required>
-            <textarea name="isi" placeholder="Isi Artikel" class="form-control mb-2" required><?= $article['isi'] ?></textarea>
+            <input type="text" name="judul" value="<?= htmlspecialchars($article['judul']) ?>" placeholder="Judul" class="form-control mb-2" required>
+            <textarea name="isi" placeholder="Isi Artikel" class="form-control mb-2" required><?= htmlspecialchars($article['isi']) ?></textarea>
             <select name="kategori" class="form-control mb-2" required>
                 <option value="Technology" <?= $article['kategori'] === 'Technology' ? 'selected' : '' ?>>Technology</option>
                 <option value="LifeStyle" <?= $article['kategori'] === 'LifeStyle' ? 'selected' : '' ?>>Lifestyle</option>
             </select>
-            <input type="text" name="author" value="<?= $article['author'] ?>" placeholder="Author" class="form-control mb-2" required>
+            <input type="text" name="author" value="<?= htmlspecialchars($article['author']) ?>" placeholder="Author" class="form-control mb-2" required>
             <input type="date" name="tanggal_publikasi" value="<?= $article['tanggal_publikasi'] ?>" class="form-control mb-2" required>
-            <input type="text" name="images" value="<?= $article['images'] ?>" placeholder="URL Gambar" class="form-control mb-2" required>
+            <input type="hidden" name="existing_image" value="<?= htmlspecialchars($article['images']) ?>">
+            <input type="file" name="images" accept="image/*">
             <button type="submit" class="btn btn-primary">Simpan</button>
             <a href="?action=view" class="btn btn-secondary">Batal</a>
         </form>
