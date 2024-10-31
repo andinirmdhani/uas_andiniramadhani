@@ -72,7 +72,6 @@ if ($result->num_rows > 0) {
             <li><a class="next" href="?page=<?php echo $page - 1; ?>"><span class="fa fa-angle-left"></span></a></li>
         <?php endif; ?>
 
-        <!-- Nomor Halaman -->
         <?php for ($i = 1; $i <= $total_pages; $i++): ?>
             <li>
                 <a class="page-numbers <?php echo $i == $page ? 'current' : ''; ?>" href="?page=<?php echo $i; ?>">
@@ -81,7 +80,6 @@ if ($result->num_rows > 0) {
             </li>
         <?php endfor; ?>
 
-        <!-- Tombol Berikutnya -->
         <?php if ($page < $total_pages): ?>
             <li><a class="next" href="?page=<?php echo $page + 1; ?>"><span class="fa fa-angle-right"></span></a></li>
         <?php endif; ?>
@@ -89,6 +87,5 @@ if ($result->num_rows > 0) {
 </div>
 
 <?php
-// Menutup koneksi
 $conn->close();
 ?>
