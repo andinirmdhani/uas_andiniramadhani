@@ -84,21 +84,6 @@ Author URL: http://w3layouts.com
                         </div>
                         <!-- /search popup -->
                     </div>
-                    <!--//search-right-->
-
-                    <!-- author -->
-                    <!-- <div class="header-author d-flex ml-lg-4 pl-2 mt-lg-0 mt-3">
-                        <a class="img-circle img-circle-sm" href="#author">
-                            <img src="assets/images/author.jpg" class="img-fluid" alt="...">
-                        </a>
-                        <div class="align-self ml-3">
-                            <a href="#author">
-                                <h5>Alexander</h5>
-                            </a>
-                            <span>Blog Writer</span>
-                        </div>
-                    </div> -->
-                    <!-- // author-->
                 </div>
 
                 <!-- toggle switch for light and dark theme -->
