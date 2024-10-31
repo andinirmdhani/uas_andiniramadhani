@@ -1,19 +1,15 @@
 <?php
-// Konfigurasi koneksi database
 $host = 'localhost';
 $username = 'root';
 $password = '';
 $database = 'uas_5a';
 
-// Membuat koneksi
 $conn = new mysqli($host, $username, $password, $database);
 
-// Cek koneksi
 if ($conn->connect_error) {
     die("Koneksi gagal: " . $conn->connect_error);
 }
 
-// Tentukan kategori dan batas artikel yang akan ditampilkan
 $kategori = 'lifestyle';
 $limit = 4;
 

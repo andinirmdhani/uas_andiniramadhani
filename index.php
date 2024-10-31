@@ -115,7 +115,6 @@ Author URL: http://w3layouts.com
                         </div>
                     </nav>
                 </div>
-                <!-- //toggle switch for light and dark theme -->
             </div>
         </nav>
         <!--//nav-->
@@ -130,8 +129,6 @@ Author URL: http://w3layouts.com
                     <h3 class="section-title-left">Most Recent posts </h3>
                     
                     <?php include 'route/artikel.php';?>    
-                    
-                    <!-- //pagination -->
                 </div>
                 <div class="col-lg-3 trending mt-lg-0 mt-5 mb-lg-5">
                     <div class="pos-sticky">
