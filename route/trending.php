@@ -63,6 +63,5 @@ $result = $stmt->get_result();
 </div>
 
 <?php
-// Menutup koneksi
 $conn->close();
 ?>
