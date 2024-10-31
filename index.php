@@ -128,21 +128,9 @@ Author URL: http://w3layouts.com
             <div class="row">
                 <div class="col-lg-9 most-recent">
                     <h3 class="section-title-left">Most Recent posts </h3>
-                    <div class="list-view ">
+                    
                     <?php include 'route/artikel.php';?>    
-                    </div>
-                    <!-- pagination -->
-                    <div class="pagination-wrapper mt-5">
-                        <ul class="page-pagination">
-                            <li><a class="next" href="#url"><span class="fa fa-angle-left"></span></a></li>
-                            <li><span aria-current="page" class="page-numbers current">1</span></li>
-                            <li><a class="page-numbers" href="#url">2</a></li>
-                            <li><a class="page-numbers" href="#url">3</a></li>
-                            <li><a class="page-numbers" href="#url">....</a></li>
-                            <li><a class="page-numbers" href="#url">10</a></li>
-                            <li><a class="next" href="#url"><span class="fa fa-angle-right"></span></a></li>
-                        </ul>
-                    </div>
+                    
                     <!-- //pagination -->
                 </div>
                 <div class="col-lg-3 trending mt-lg-0 mt-5 mb-lg-5">
