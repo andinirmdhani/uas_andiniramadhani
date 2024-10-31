@@ -27,8 +27,6 @@ $stmt = $conn->prepare($sql);
 $stmt->bind_param('si', $kategori, $limit);
 $stmt->execute();
 $result = $stmt->get_result();
-
-// Tampilkan artikel trending
 ?>
 
 <div class="trending-articles">
