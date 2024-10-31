@@ -23,10 +23,10 @@ Author URL: http://w3layouts.com
 	<!--/nav-->
 	<nav class="navbar navbar-expand-lg navbar-light fill px-lg-0 py-0 px-3">
 		<div class="container">
-			<a class="navbar-brand" href="index.html">
+			<a class="navbar-brand" href="index.php">
 				<span class="fa fa-pencil-square-o"></span> Design Blog</a>
 			<!-- if logo is image enable this   
-						<a class="navbar-brand" href="#index.html">
+						<a class="navbar-brand" href="#index.php">
 							<img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
 						</a> -->
 			<button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
@@ -40,7 +40,7 @@ Author URL: http://w3layouts.com
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item @@home__active">
-						<a class="nav-link" href="index.html">Home</a>
+						<a class="nav-link" href="index.php">Home</a>
 					</li>
 					<li class="nav-item dropdown active">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -48,15 +48,15 @@ Author URL: http://w3layouts.com
 							Categories <span class="fa fa-angle-down"></span>
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item @@cp__active" href="technology.html">Technology posts</a>
-							<a class="dropdown-item active" href="lifestyle.html">Lifestyle posts</a>
+							<a class="dropdown-item @@cp__active" href="technology.php">Technology posts</a>
+							<a class="dropdown-item active" href="lifestyle.php">Lifestyle posts</a>
 						</div>
 					</li>
 					<li class="nav-item @@contact__active">
-						<a class="nav-link" href="contact.html">Contact</a>
+						<a class="nav-link" href="contact.php">Contact</a>
 					</li>
                     <li class="nav-item @@about__active">
-                        <a class="nav-link" href="about.html">About</a>
+                        <a class="nav-link" href="about.php">About</a>
                     </li>
 				</ul>
 
