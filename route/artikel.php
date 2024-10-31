@@ -82,7 +82,7 @@ if ($result->num_rows > 0) {
         <?php endfor; ?>
 
         <!-- Tombol Berikutnya -->
-        <?php if ($page < $total_pages): ?>
+        <?php if ($page < $total_pages ): ?>
             <li><a class="next" href="?page=<?php echo $page + 1; ?>"><span class="fa fa-angle-right"></span></a></li>
         <?php endif; ?>
     </ul>
